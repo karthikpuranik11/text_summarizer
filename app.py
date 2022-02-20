@@ -59,10 +59,10 @@ with st.spinner("Generating Summary.."):
     if button and video:
         v = VideoFileClip("video.mp4")
         v.audio.write_audiofile("movie.wav")
-        #whole_text=get_large_audio_transcription("movie.wav")
-        #st.write(whole_text)
         #st.video(video, format="video/mp4", start_time=0)
         st.audio("movie.wav")
+        whole_text=get_large_audio_transcription("movie.wav")
+        st.write(whole_text)
    
         
     
