@@ -30,7 +30,7 @@ def mp4_to_wav(v):
   return wav_video
 
 st.title("Summarize Text")
-video = st.file_uploader("Choose a file")
+video = st.file_uploader("Choose a file", type=['mp4'])
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
