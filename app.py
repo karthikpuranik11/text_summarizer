@@ -25,8 +25,6 @@ def welcome():
     
 st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
-with open("video.mp4", "wb") as f:
-    f.write(buf.getbuffer())
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
