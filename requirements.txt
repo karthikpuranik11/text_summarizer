@@ -15,5 +15,5 @@ stanfordnlp
 transformers
 pydub
 SpeechRecognition
-
+moviepy
 
