@@ -32,8 +32,9 @@ max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
 min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
+        audio = AudioSegment.from_file(video, format="mp4")
+        audio.export("audio.wav", format="wav")
         #st.video(video, format="video/mp4", start_time=0)
-        clip = VideoFileClip("video.mp4")
-        frame = clip.get_frame(3)
-        st.image(frame)
+        st.write("audio.wav")
+        
     
