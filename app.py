@@ -33,7 +33,7 @@ min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
         #st.video(video, format="video/mp4", start_time=0)
-        clip = VideoFileClip(video)
+        clip = VideoFileClip("video.mp4")
         frame = clip.get_frame(3)
         st.image(frame)
     
