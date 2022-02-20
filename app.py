@@ -34,7 +34,7 @@ with st.spinner("Generating Summary.."):
     if button and video:
         audio = AudioSegment.from_file(video, format="mp4")
         audio.export("audio.wav", format="wav")
-        #st.video(video, format="video/mp4", start_time=0)
-        st.write("audio.wav")
+        st.video(video, format="video/mp4", start_time=0)
+        #st.write("audio.wav")
         
     
