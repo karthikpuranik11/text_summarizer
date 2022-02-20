@@ -26,8 +26,7 @@ def welcome():
 
 def mp4_to_wav(v):
   video = VideoFileClip(v)
-  video.audio.write_audiofile(wav_video)
-  return wav_video
+  video.audio.write_audiofile(os.path.join("/content/movie.wav"))
 
 st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
@@ -37,5 +36,5 @@ max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
 min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
-        st.write(mp4_to_wav(video))
+        st.write(movie.wav)
     
