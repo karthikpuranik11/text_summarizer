@@ -33,5 +33,5 @@ min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 do_sample = st.sidebar.checkbox("Do sample", value=False)
 with st.spinner("Generating Summary.."):
     if button and sentence:
-        st.write(senetence)
+        st.write(sentence)
     
