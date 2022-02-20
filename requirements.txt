@@ -16,4 +16,4 @@ transformers
 pydub
 SpeechRecognition
 moviepy
-
+nltk
