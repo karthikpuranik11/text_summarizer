@@ -17,3 +17,5 @@ pydub
 SpeechRecognition
 moviepy
 nltk
+ffprobe
+ffmpeg
