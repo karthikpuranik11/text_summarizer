@@ -31,12 +31,9 @@ def get_large_audio_transcription(path):
         silence_thresh = sound.dBFS-14,
         keep_silence=500,
     )
-    folder_name = "/content/"
-    if not os.path.isdir(folder_name):
-        os.mkdir(folder_name)
     whole_text = ""
     for i, audio_chunk in enumerate(chunks, start=1):
-        chunk_filename = os.path.join(folder_name, f"chunk{i}.wav")
+        chunk_filename = os.path.join(f"chunk{i}.wav")
         audio_chunk.export(chunk_filename, format="wav")
         with sr.AudioFile(chunk_filename) as source:
             audio_listened = r.record(source)
