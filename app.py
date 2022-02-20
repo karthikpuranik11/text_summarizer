@@ -9,7 +9,6 @@ from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import transformers
 from transformers import pipeline
-summarizer = pipeline("summarization", model="t5-base", tokenizer="t5-base", framework="tf")
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -61,6 +60,7 @@ with st.spinner("Generating Summary.."):
         st.audio("movie.wav")
         whole_text=get_large_audio_transcription("movie.wav")
         st.write(whole_text)
+        summarizer = pipeline("summarization")
         summarized = summarizer(whole_text, min_length=75, max_length=300)
         summ=summarized[0]['summary_text']
         st.write(summ)
