@@ -24,7 +24,7 @@ def welcome():
     return "Welcome All"
   
 def mp4_to_wav(video):
-  video = VideoFileClip(video)
+  video = VideoFileClip(video, format=".mp4")
   video.audio.write_audiofile(wav, format='.wav')
   return wav  
     
