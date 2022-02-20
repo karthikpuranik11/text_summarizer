@@ -62,7 +62,7 @@ with st.spinner("Generating Summary.."):
         #whole_text=get_large_audio_transcription("movie.wav")
         #st.write(whole_text)
         #st.video(video, format="video/mp4", start_time=0)
-        st.audio(v)
+        st.audio("movie.wav")
    
         
     
