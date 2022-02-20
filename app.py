@@ -31,7 +31,7 @@ def get_large_audio_transcription(path):
         silence_thresh = sound.dBFS-14,
         keep_silence=500,
     )
-    folder_name = ""
+    folder_name = "/content/"
     if not os.path.isdir(folder_name):
         os.mkdir(folder_name)
     whole_text = ""
