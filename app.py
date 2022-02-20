@@ -26,7 +26,7 @@ def welcome():
 
 @st.cache(allow_output_mutation=True)
 def load_summarizer():
-    model = pipeline("summarization", device=0)
+    model = pipeline("summarization", model="t5-base", tokenizer="t5-base", framework="tf")
     return model
 
 
