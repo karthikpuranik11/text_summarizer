@@ -26,7 +26,7 @@ def welcome():
 
 def mp4_to_wav(v):
   video = VideoFileClip(v)
-  video.audio.write_audiofile(os.path.join("/content/movie.wav"))
+  video.audio.write_audiofile(os.path.join("movie.wav"))
 
 st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
