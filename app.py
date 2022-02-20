@@ -25,13 +25,15 @@ def welcome():
     
 st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
+with open("video.mp4", "wb") as f:
+    f.write(buf.getbuffer())
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
 min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
-        v = VideoFileClip(video, endswith=".mp4")
+        v = VideoFileClip("video.mp4)
         v.audio.write_audiofile("movie.wav")
         st.audio(video, format="video/mp4", start_time=0)
     
