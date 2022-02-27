@@ -50,6 +50,7 @@ st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
 if video is not None:
      bytes_data = video.getvalue()
+video.export("video1.mp4", format="mp4")
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
@@ -57,9 +58,9 @@ min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
         st.write("step1")
-        video1=open(bytes_data, 'rb').read()
+        #video1=open(bytes_data, 'rb').read()
         st.write("step2")
-        v = VideoFileClip(video1)
+        v = VideoFileClip("video1.mp4")
         st.write("step3")
         #v.audio.write_audiofile("movie.wav")
         #st.video(video, format="video/mp4", start_time=0)
