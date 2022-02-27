@@ -60,7 +60,7 @@ with st.spinner("Generating Summary.."):
         st.write("step1")
         #video1=open(bytes_data, 'rb').read()
         st.write("step2")
-        v = VideoFileClip("video1.mp4")
+        v = VideoFileClip("video.mp4")
         st.write("step3")
         #v.audio.write_audiofile("movie.wav")
         #st.video(video, format="video/mp4", start_time=0)
