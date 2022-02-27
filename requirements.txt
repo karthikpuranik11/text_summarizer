@@ -19,3 +19,4 @@ moviepy==0.2.3.5
 nltk
 ffprobe
 ffmpeg
+imageio-ffmpeg
