@@ -48,6 +48,8 @@ def get_large_audio_transcription(path):
     
 st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
+v = VideoFileClip(video)
+st.write("completed")
 if video is not None:
      bytes_data = video.getvalue()
 #video.export("video1.mp4", format="mp4")
