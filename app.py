@@ -55,9 +55,8 @@ min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
         #v = VideoFileClip(video)
-        st.write("converted")
         #v.audio.write_audiofile("movie.wav")
-        #st.video(video, format="video/mp4", start_time=0)
+        st.video(video, format="video/mp4", start_time=0)
         #st.audio("movie.wav")
         #whole_text=get_large_audio_transcription("movie.wav")
         #st.write(whole_text)
