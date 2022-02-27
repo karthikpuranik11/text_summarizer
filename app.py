@@ -47,7 +47,7 @@ def get_large_audio_transcription(path):
     return whole_text
     
 st.title("Summarize Text")
-video = st.file_uploader("Choose a file")
+video = st.file_uploader("Choose a file", type=['mp4'])
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
