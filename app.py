@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st 
 import joblib
 import os
-from moviepy.editor import *
+from moviepy.editor import VideoFileClip
 import speech_recognition as sr
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
