@@ -50,7 +50,7 @@ st.title("Summarize Text")
 video = st.file_uploader("Choose a file", type=['mp4'])
 if video is not None:
      bytes_data = video.getvalue()
-video.export("video1.mp4", format="mp4")
+#video.export("video1.mp4", format="mp4")
 button = st.button("Summarize")
 
 max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
