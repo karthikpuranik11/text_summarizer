@@ -54,7 +54,10 @@ max = st.sidebar.slider('Select max', 50, 500, step=10, value=150)
 min = st.sidebar.slider('Select min', 10, 450, step=10, value=50)
 with st.spinner("Generating Summary.."):
     if button and video:
-        v = VideoFileClip("video.mp4")
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        tfile.write(video.read())
+        #st.write(tfile.name)
+        v = VideoFileClip(tfile.name)
         v.audio.write_audiofile("movie.wav")
         #st.video(video, format="video/mp4", start_time=0)
         st.audio("movie.wav")
